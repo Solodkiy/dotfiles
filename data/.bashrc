@@ -16,7 +16,7 @@ umask 022
 # alias mv='mv -i'
 
 #if [ "$SSH_TTY" ]; then
-  if [ ! "$STY" ] ; then
+#  if [ ! "$STY" ] ; then
     #CHOICE=`SCREEN/choose`
     #if [ -z "$CHOICE" ]
     #then		
@@ -24,9 +24,9 @@ umask 022
     #else
      # exec screen -dr $CHOICE
 #	echo $CHOICE
-exec screen -Rd
+#       exec screen -Rd
 #   fi
-  fi
+#  fi
 #fi
 
 export EDITOR='nano'
