@@ -17,12 +17,12 @@ umask 022
 
 #if [ "$SSH_TTY" ]; then
 #  if [ ! "$STY" ] ; then
-    #CHOICE=`SCREEN/choose`
-    #if [ -z "$CHOICE" ]
-    #then		
-     # exec screen 
-    #else
-     # exec screen -dr $CHOICE
+#   CHOICE=`SCREEN/choose`
+#   if [ -z "$CHOICE" ]
+#   then		
+#     exec screen 
+#   else
+#       exec screen -dr $CHOICE
 #	echo $CHOICE
 #       exec screen -Rd
 #   fi
@@ -31,8 +31,8 @@ umask 022
 
 export EDITOR='nano'
 
-alias ls='ls -GAh'
-alias ll='ls -l'
+alias ls='ls -GAh --color'
+alias ll='ls -l --color'
 alias cp='cp -i'
 alias cpr='cp -iR'
 alias rm='rm -i'
