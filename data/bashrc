@@ -31,7 +31,7 @@ umask 022
 
 export EDITOR='nano'
 
-alias ls='ls -GAh --color'
+alias ls='ls -Ah --color'
 alias ll='ls -l --color'
 alias cp='cp -i'
 alias cpr='cp -iR'
@@ -42,7 +42,6 @@ alias fgrep='fgrep --color'
 alias ll='ls -lGAh'
 alias df='df -h'
 
-alias xmake='sudo make config-recursive install clean'
 
 shopt -s histappend
 PROMPT_COMMAND='history -a'
