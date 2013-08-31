@@ -1,6 +1,5 @@
 # ~/.bashrc: executed by bash(1) for non-login shells.
 
-#export PS1='\h:\w\$ '
 umask 022
 
 # You may uncomment the following lines if you want `ls' to be colorized:
@@ -19,11 +18,11 @@ umask 022
 #  if [ ! "$STY" ] ; then
 #   CHOICE=`SCREEN/choose`
 #   if [ -z "$CHOICE" ]
-#   then		
-#     exec screen 
+#   then
+#     exec screen
 #   else
 #       exec screen -dr $CHOICE
-#	echo $CHOICE
+#       echo $CHOICE
 #       exec screen -Rd
 #   fi
 #  fi
@@ -31,15 +30,15 @@ umask 022
 
 export EDITOR='nano'
 
+# Alias
 alias ls='ls -Ah --color'
-alias ll='ls -l --color'
+alias ll='ls -Al --color'
 alias cp='cp -i'
 alias cpr='cp -iR'
 alias rm='rm -i'
 alias rmr='rm -fr'
 alias grep='grep --color'
 alias fgrep='fgrep --color'
-alias ll='ls -lGAh'
 alias df='df -h'
 
 
@@ -48,12 +47,20 @@ PROMPT_COMMAND='history -a'
 
 export HISTCONTROL="ignoredups"
 
+
+
 ## Colour Prompt
 COLOR_RED="\[\033[1;31m\]"
 COLOR_WHITE="\[\033[0;00m\]"
 COLOR_GREEN="\[\033[0;32m\]"
 COLOR_BLUE="\[\033[0;36m\]"
+COLOR_MAGENTA="\[\033[0;35m\]"
 
-export PS1="${COLOR_RED}[${COLOR_BLUE}\u${COLOR_WHITE}@${COLOR_BLUE}\h${COLOR_WHITE} ${COLOR_GREEN}\w${COLOR_RED}]${COLOR_WHITE}# "
-
-
+# Check root
+if [[ $EUID -ne 0 ]]; then
+   # no root
+   export PS1="${COLOR_RED}[${COLOR_BLUE}\u${COLOR_WHITE}@${COLOR_BLUE}\h${COLOR_WHITE} ${COLOR_GREEN}\w${COLOR_RED}]${COLOR_WHITE}# "
+else
+   # root
+   export PS1="${COLOR_RED}[${COLOR_MAGENTA}\u${COLOR_WHITE}@${COLOR_BLUE}\h${COLOR_WHITE} ${COLOR_GREEN}\w${COLOR_RED}]${COLOR_WHITE}# "
+fi
