@@ -8,6 +8,7 @@ files = {
 	'bashrc' : '~/.bashrc',
 	'inputrc' : '~/.inputrc',
 	'profile' : '~/.profile',	
+	'nanorc' : '~/.nanorc',
 }
 
 
