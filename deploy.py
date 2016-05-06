@@ -9,6 +9,7 @@ files = {
 	'inputrc' : '~/.inputrc',
 	'profile' : '~/.profile',	
 	'screenrc' : '~/.screenrc',	
+	'gitconfig' : '~/.gitconfig',	
 }
 
 
