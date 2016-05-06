@@ -20,8 +20,8 @@ umask 022
 export EDITOR='vim'
 
 # Alias
-alias ls='ls --color'
-alias ll='ls -l --color'
+alias ls='ls -h --color'
+alias ll='ls -lh --color'
 alias cp='cp -i'
 alias rm='rm -i'
 alias grep='grep --color'
