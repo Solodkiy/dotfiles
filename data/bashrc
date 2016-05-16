@@ -27,8 +27,10 @@ alias rm='rm -i'
 alias grep='grep --color'
 alias fgrep='fgrep --color'
 alias df='df -h'
+
 # For sudo alias
 alias sudo='sudo '
+alias suod='sudo '
 
 
 shopt -s histappend
@@ -52,4 +54,9 @@ if [[ $EUID -ne 0 ]]; then
 else
    # root
    export PS1="${COLOR_RED}[${COLOR_MAGENTA}\u${COLOR_WHITE}@${COLOR_BLUE}\h${COLOR_WHITE} ${COLOR_GREEN}\w${COLOR_RED}]${COLOR_WHITE}# "
+fi
+
+# enable bash completion in interactive shells
+if [ -f /etc/bash_completion ] && ! shopt -oq posix; then
+    . /etc/bash_completion
 fi
