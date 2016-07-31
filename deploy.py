@@ -4,11 +4,12 @@ import sys
 import os
 
 files = {
-	'bashrc' : '~/.bashrc',
-	'inputrc' : '~/.inputrc',
-	'profile' : '~/.profile',	
-	'screenrc' : '~/.screenrc',	
+	'bashrc'    : '~/.bashrc',
+	'inputrc'   : '~/.inputrc',
+	'profile'   : '~/.profile',	
+	'screenrc'  : '~/.screenrc',	
 	'gitconfig' : '~/.gitconfig',	
+	'vimrc'     : '~/.vimrc',	
 }
 
 
