@@ -37,6 +37,10 @@ PROMPT_COMMAND='history -a'
 
 export HISTCONTROL="ignoredups"
 
+#  Fuck
+if hash thefuck 2>/dev/null; then
+    eval $(thefuck --alias) 
+fi
 
 
 ## Colour Prompt
