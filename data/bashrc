@@ -20,8 +20,13 @@ umask 022
 export EDITOR='vim'
 
 # Alias
-alias ls='ls -h --color'
-alias ll='ls -lh --color'
+if [[ "$OSTYPE" == "darwin"* ]]; then # OSX
+	alias ls='ls -h -G'
+	alias ll='ls -lh -G'
+else
+	alias ls='ls -h --color'
+	alias ll='ls -lh --color'
+fi
 alias grep='grep --color'
 alias fgrep='fgrep --color'
 alias df='df -h'
