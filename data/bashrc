@@ -37,6 +37,7 @@ alias sudo='sudo '
 alias suod='sudo '
 
 
+
 shopt -s histappend
 PROMPT_COMMAND='history -a'
 
@@ -57,8 +58,8 @@ COLOR_MAGENTA="\[\033[0;35m\]"
 
 # Check root
 if [[ $EUID -ne 0 ]]; then
-   # no root
-   export PS1="${COLOR_RED}[${COLOR_BLUE}\u${COLOR_WHITE}@${COLOR_BLUE}\h${COLOR_WHITE} ${COLOR_GREEN}\w${COLOR_RED}]${COLOR_WHITE}# "
+    # no root
+    export PS1="${COLOR_RED}[${COLOR_BLUE}\u${COLOR_WHITE}@${COLOR_BLUE}\h${COLOR_WHITE} ${COLOR_GREEN}\w"'$(__git_ps1 " (%s)")'"${COLOR_RED}]${COLOR_WHITE}# "
 else
    # root
    export PS1="${COLOR_RED}[${COLOR_MAGENTA}\u${COLOR_WHITE}@${COLOR_BLUE}\h${COLOR_WHITE} ${COLOR_GREEN}\w${COLOR_RED}]${COLOR_WHITE}# "
