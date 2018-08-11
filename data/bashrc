@@ -18,6 +18,7 @@ umask 022
 #fi
 
 export EDITOR='vim'
+export PATH=$PATH:~/bin
 
 # Alias
 if [[ "$OSTYPE" == "darwin"* ]]; then # OSX
