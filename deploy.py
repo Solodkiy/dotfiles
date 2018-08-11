@@ -10,6 +10,7 @@ files = {
 	'screenrc'  : '~/.screenrc',	
 	'gitconfig' : '~/.gitconfig',	
 	'vimrc'     : '~/.vimrc',	
+	'git-prompt.sh' : '~/.git-prompt.sh',	
 }
 
 

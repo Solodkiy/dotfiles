@@ -2,7 +2,6 @@
 
 umask 022
 
-
 #if [ "$SSH_TTY" ]; then
 #  if [ ! "$STY" ] ; then
 #   CHOICE=`SCREEN/choose`
@@ -56,6 +55,8 @@ COLOR_WHITE="\[\033[0;00m\]"
 COLOR_GREEN="\[\033[0;32m\]"
 COLOR_BLUE="\[\033[0;36m\]"
 COLOR_MAGENTA="\[\033[0;35m\]"
+
+source .git-prompt.sh
 
 # Check root
 if [[ $EUID -ne 0 ]]; then
